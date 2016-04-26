@@ -3,7 +3,8 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="renderer" content="webkit">
         <title>婚礼</title>
         <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" type="text/css">
@@ -21,7 +22,7 @@
         <!-- <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=BNiy3VISejq5RO3zaPwDMSefokaWc6iu"></script> -->
     </head>
     <body>
-        <nav class="navbar navbar-inverse navbar-fixed-top">
+        <nav id='header' class="navbar navbar-fixed-top">
             <div class="container-fluid">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -30,21 +31,23 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">婚礼请帖</a>
+                    <!-- <a class="navbar-brand" href="#">婚礼请帖</a> -->
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="#">首页</a></li>
                         <li><a href="#">相册</a></a></li>
                         <li><a href="#">留言</a></li>
-                        <li><a href="#">Help</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
         <div class="page-wrapper">
             <section id="info" class="card introduction">
-            <img src="images/card1.png" alt=""/>
+            <div id="banner" class="hidden">
+                <h3>郑娟 & 周嗣富</h3>
+                <p>2016年06月25日 12时00分<br>农历五月廿一(周六)<br>成都市双流县华阳镇益州大道南段288号祥辉大酒店</p>
+            </div>
             </section>
             <section id="info" class="card">
             <img src="images/card2.png" alt=""/>
@@ -70,10 +73,17 @@
                 </div>
                 <div class="map-box">
                     <div id="mapContent">
+                        <div class="map-search"></div>
                         <!-- <a href="http://api.map.baidu.com/geocoder?location=104.062924,30.536617&output=html"> -->
-                        <a href="http://api.map.baidu.com/geocoder?address=成都市双流县华阳镇益州大道南段288号祥辉大酒店&output=html">
-                        <img src="http://api.map.baidu.com/staticimage/v2?ak=BNiy3VISejq5RO3zaPwDMSefokaWc6iu&center=104.062924,30.536617&markers=104.062924,30.536617&markerStyles=l,A&width=576&height=275&zoom=18" alt="">
+                        <!-- <a href="http://api.map.baidu.com/geocoder?address=成都市双流县华阳镇益州大道南段288号祥辉大酒店&output=html"> -->
+
+                        <a href="http://api.map.baidu.com/marker?location=30.536617,104.062924&title=祥辉大酒店&content=成都市双流县华阳镇益州大道南段288号祥辉大酒店&output=html&src=wedding">
+
+                        <img src="http://api.map.baidu.com/staticimage/v2?ak=BNiy3VISejq5RO3zaPwDMSefokaWc6iu&center=104.062924,30.536617&markers=104.062924,30.536617&markerStyles=l,A&width=640&height=275&zoom=18" alt="">
                         </a>
+                    </div>
+                    <div class="map-msg">
+                        <h5>地址：成都市双流县华阳镇益州大道南段288号祥辉大酒店<a href="http://api.map.baidu.com/marker?location=30.536617,104.062924&title=祥辉大酒店&content=成都市双流县华阳镇益州大道南段288号祥辉大酒店&output=html&src=wedding" class="map-btn"></a></h5>
                     </div>
                 </div>
             </section>
@@ -83,6 +93,12 @@
             
             </section>
         </div>
+        <div class="musicPlay music-play rotate" play="opend">
+            <img src="images/music.png">
+            <audio class="hidden" id="audio" autoplay="autoplay" loop="loop">
+                <source src="http://mp3.123hl.cn/LoveParadise.mp3" type="audio/mpeg">
+        </audio>
+        </div
 
         <!-- Bootstrap core JavaScript
             ================================================== -->

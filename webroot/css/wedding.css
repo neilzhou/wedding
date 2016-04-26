@@ -4,3 +4,103 @@
 @-ms-viewport       { width: device-width; }
 @-o-viewport        { width: device-width; }
 @viewport           { width: device-width; }
+
+body,button, input, select, textarea,h1 ,h2, h3, h4, h5, h6 { font-family: Microsoft YaHei,'宋体' , Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif;}
+
+body{background-color: #ff5c5c; color: #fff;}
+nav#header{background: rgba(255, 255, 255, 0.75);}
+/*nav#header{background: transparent;}*/
+    nav#header .icon-bar { background-color: #ff5c5c;}
+    nav#header .icon-bar { background-color: #ff5c5c;}
+.nav>li>a:focus, .nav>li>a:hover {background-color: #ffa0a0; color:#fff;}
+div.page-wrapper {padding-bottom: 30px; position: relative; width:100%; text-align: center;}
+a, #banner {color: #ff5c5c;}
+
+
+section.introduction {background: url("images/card1.png")}
+    section.introduction #banner {
+        background: rgba(255, 255, 255, 0.9);
+        position: absolute;
+        top: 0;
+        left: 3%;
+        width: 35%;
+        max-width: 450px;
+        text-align: center;
+    }
+    section.introduction #banner {
+        padding-top: 100px;
+    }
+section.card img{
+    width: 100%;
+}
+
+
+.musicPlay {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 40px;
+    z-index: 99;
+}
+.musicPlay img {width:100%;}
+
+@-webkit-keyframes mplay {
+    0% { -webkit-transform: rotate(0deg);}
+    100% { -webkit-transform: rotate(360deg);}
+}
+.music-play {
+    -webkit-animation: mplay 5s linear infinite;
+    animation-play-state: paused;
+    -webkit-animation-play-state: paused;
+}
+.rotate {
+    -webkit-animation-play-state: running;
+}
+.music-play img {width:100%}
+
+.map-box {
+ position: relative;
+ margin: 15px 15px 0;
+ border-radius: 5px;
+ background: #fff;
+ padding: 15px;
+}
+
+.map-msg {
+    padding: 10px 0;
+    overflow: hidden;
+}
+.map-msg h5 {
+    font-size: 1.4rem;
+    line-height: 20px;
+    min-height: 25px;
+    color: #999;
+    overflow: hidden;
+}
+.map-btn {
+    display: inline-block;
+    margin-top: 2px;
+    margin-right: 6px;
+    width: 50px;
+    height: 18px;
+    background: url(../images/bmap-nav.png) no-repeat;
+    background-size: 100% 100%;
+    border: 0;
+    outline:0;
+    border-radius: 0;
+}
+#mapContent {position: relative}
+.map-search {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 28px;
+    height: 28px;
+    background: url(../images/bmap-search.png) no-repeat;
+    background-size: 100% 100%;
+    z-index: 99999;
+}
