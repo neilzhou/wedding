@@ -138,6 +138,109 @@ a, #banner {color: #ff5c5c;}
      50% {transform: translateY(-10px);} 
      100% {transform: translateY(0);}
  }
+/*css for section we get married*/
+.slide-married{
+     width:100%;
+    height:100%;
+    position:relative;
+    margin:0 auto;
+    padding-top:8%;
+}
+.slide_02,
+.slide_04,
+.slide_05,
+.slide_06,
+.slide_07{
+    width:100%;
+    height:100%;
+    position:relative;
+    margin:0 auto;
+    background:#fff1cb url(../images/66_sub_bg.png) bottom no-repeat;
+    background-size:100% auto;
+}
+.slide_03{
+    width:100%;
+    height:100%;
+    position:relative;
+    margin:0 auto;
+    padding:20px 5px 0px 0px;
+}
+.slide_08{
+    width:100%;
+    height:100%;
+    background:url(../images/66_wedding_page.jpg) no-repeat;
+    background-size:100% 100%;
+    position:relative;
+}
+
+.slide_09{
+    width:100%;
+    height:100%;
+    background:#fff;
+}
+.slide_10{
+    width:100%;
+    height:100%;
+    background:url(../images/66_count_bg.jpg) bottom no-repeat;
+    background-size:100% 100%;
+    position:relative;
+}
+
+.marry_title{
+    clear:both;
+    color:#ee4351;
+    font-size:26px;
+    margin:0 auto;
+    padding:5% 0 5% 0;
+    text-align:center;
+}
+.splite{
+    width:100%;
+    height:10px;
+    background:url(../images/66_splite.png) center no-repeat;
+    background-size:260px auto;
+    margin:10px auto;
+    text-align:center;
+}
+.wish_sp{
+    width:100%;
+    height:6px;
+    background:url(../images/66_wishsp.png) center no-repeat;
+    background-size:auto 6px;
+    margin:10px auto;
+    text-align:center;
+}
+.m-animationCloudBg{height: 100%;  position: absolute; top: 0px; bottom: 0px; left: 0px; right: 0px;  z-index: 0; overflow: hidden;}
+.m-animationCloudBg i {
+    width: 640px;
+    height: 300px;
+    display: block;
+    position: absolute;
+    opacity: 0;
+    z-index: 0;
+    z-index: 0 !important;
+    top: 50px;
+    left: -100px;
+}
+.m-animationCloudBg i:nth-child(1){background: url(../images/66_cloud1.png); top: 50px; left: -100px; -webkit-animation: animationCloudBg 1s linear infinite; -webkit-animation-delay: 2s;}
+.m-animationCloudBg i:nth-child(2){background: url(../images/66_cloud2.png); top: 100px; left: -50px; -webkit-animation: animationCloudBg 2s linear infinite; -webkit-animation-delay: 1s;}
+.m-animationCloudBg i:nth-child(3){background: url(../images/66_cloud3.png); top: 150px; left: -0px; -webkit-animation: animationCloudBg 4s linear infinite; -webkit-animation-delay: 0s;}
+.m-animationCloudBg i:nth-child(4){background: url(../images/66_cloud4.png); top: 200px; left: 50px; -webkit-animation: animationCloudBg 2s linear infinite; -webkit-animation-delay: 2s;}
+.m-animationCloudBg i:nth-child(5){background: url(../images/66_cloud5.png); top: 250px; left: -50px; -webkit-animation: animationCloudBg 1.2s linear infinite; -webkit-animation-delay: 3s;}
+.m-animationCloudBg i:nth-child(6){background: url(../images/66_cloud6.png); top: 300px; left: 20px; -webkit-animation: animationCloudBg 3s linear infinite; -webkit-animation-delay: 1s;}
+.m-animationCloudBg i:nth-child(7){background: url(../images/66_cloud1.png); top: 350px; left: 80px; -webkit-animation: animationCloudBg 4.5s linear infinite; -webkit-animation-delay: 0s;}
+.m-animationCloudBg i:nth-child(8){background: url(../images/66_cloud2.png); top: 400px; left: -10px; -webkit-animation: animationCloudBg 2.8s linear infinite; -webkit-animation-delay: 1s;}
+.m-animationCloudBg i:nth-child(9){background: url(../images/66_cloud3.png); top: 350px; left: 80px; -webkit-animation: animationCloudBg 1.6s linear infinite; -webkit-animation-delay: 2s;}
+.m-animationCloudBg i:nth-child(10){background: url(../images/66_cloud4.png); top: 20px; left: -100px; -webkit-animation: animationCloudBg 4s linear infinite; -webkit-animation-delay: 1s;}
+.m-animationCloudBg i:nth-child(11){background: url(../images/66_cloud5.png); top: 60px; left: 0px; -webkit-animation: animationCloudBg 2.5s linear infinite; -webkit-animation-delay: 2s;}
+.m-animationCloudBg i:nth-child(12){background: url(../images/66_cloud6.png); top: 0px; left: -50px; -webkit-animation: animationCloudBg 3.2s linear infinite; -webkit-animation-delay: 0s;}
+@-webkit-keyframes animationCloudBg{
+    0%{-webkit-transform: scale(0.5) translate(-300px, 300px) rotateX(0deg) rotateY(0deg); opacity: 0;}
+    33%{-webkit-transform: scale(1) translate(-80px, 80px) rotateX(20deg) rotateY(-20deg); opacity: 1;}
+    66%{-webkit-transform: scale(1.5) translate(100px, -100px) rotateX(30deg) rotateY(-10deg); opacity: 0.8;}
+    100%{-webkit-transform: scale(1.8) translate(300px, -300px) rotateX(0deg) rotateY(0deg); opacity: 0.6;}
+}
+
 /*css for card section */
 section.card {
     width: 100%;
@@ -208,6 +311,8 @@ section.introduction {
 .newman label{
     font-weight: normal;
 }
+
+
 
 /*Baidu map for location*/
 .map-box {
