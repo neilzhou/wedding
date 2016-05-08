@@ -1,3 +1,10 @@
+$(document).ready(function(){
+  //$('section').height($(window).height());
+var mySwiper = new Swiper ('.swiper-container', {
+    direction: 'vertical',
+    loop: true,
+  })        
+});
 function mp3_play(mp3_url){
     var qt_mp3_url = "http://mp3.123hl.cn/wodemingzijiaoyilian.m4a";
     if (mp3_url) {
