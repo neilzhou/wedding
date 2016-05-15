@@ -1,16 +1,13 @@
-
-if(!browser.versions.mobile) {
-  var hash = location.hash;
-  if(!hash) hash = '';
-  window.location.href="pc.html" + hash;
+if(browser.versions.mobile) {
+  window.location.href="index.html"
 }
 
 $(document).ready(function(){
   //$('section').height($(window).height());
     var mySwiper = new Swiper ('.swiper-container', {
-        direction: 'vertical',
+        mode: 'vertical',
         mousewheelControl: true,
-        onInit: function(swiper){ //Swiper2.x的初始化是onFirstInit
+        onFirstInit: function(swiper){ //Swiper2.x的初始化是onFirstInit
             swiperAnimateCache(swiper); //隐藏动画元素 
             if(!pageHash || pageHash != 'address') {
                 swiperAnimate(swiper); //初始化完成开始动画
@@ -21,11 +18,11 @@ $(document).ready(function(){
         } 
     });
     $('li.invitation').click(function(){
-        mySwiper.slideTo(0, 1000, true);//切换到第一个slide，速度为1秒
+        mySwiper.swipeTo(0, 1000, true);//切换到第一个slide，速度为1秒
     });
 
     $('li.address').click(function(){
-        mySwiper.slideTo(2, 1000, true);//切换到第3个slide，速度为1秒
+        mySwiper.swipeTo(2, 1000, true);//切换到第3个slide，速度为1秒
     });
 
     if(pageHash && pageHash == 'address') {

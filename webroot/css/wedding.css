@@ -44,31 +44,40 @@ a, #banner {color: #ff5c5c;}
     transition: all 0.4s ease-in-out;
 }
 .ul_nav li a.nav-invitation {
-    background-image: url(http://file.xitie.net.cn/31_ul_nav.png);
+    background-image: url(../images/31_ul_nav.png);
     background-position: -127px 0px;
 }
+.ul_nav li a.nav-address{
+    background-image: url(../images/31_ul_nav.png);
+    background-position: -127px -54px;
+}
 .ul_nav li a.nav-photos{
-    background-image: url(http://file.xitie.net.cn/31_ul_nav.png);
+    background-image: url(../images/31_ul_nav.png);
     background-position: -127px -165px;
 }
 
 .ul_nav li a:hover.nav-invitation, .ul_nav li.active a.nav-invitation {
-    background-image: url(http://file.xitie.net.cn/31_ul_nav.png);
+    background-image: url(../images/31_ul_nav.png);
     background-position: 0px 0px;
 }
 
+.ul_nav li a:hover.nav-address, .ul_nav li.active a.nav-address {
+    background-image: url(../images/31_ul_nav.png);
+    background-position: 0px -54px;
+}
+
 .ul_nav li a:hover.nav-photos, .ul_nav li.active a.nav-photos {
-    background-image: url(http://file.xitie.net.cn/31_ul_nav.png);
+    background-image: url(../images/31_ul_nav.png);
     background-position: 0px -165px;
 }
 
 .ul_nav li a.nav-message {
-    background-image: url(http://file.xitie.net.cn/31_ul_nav.png);
+    background-image: url(../images/31_ul_nav.png);
     background-position: -127px -277px;
 }
 
 .ul_nav li a:hover.nav-message, .ul_nav li.active a.nav-message {
-    background-image: url(http://file.xitie.net.cn/31_ul_nav.png);
+    background-image: url(../images/31_ul_nav.png);
     background-position: 0px -277px;
 }
 
@@ -126,19 +135,19 @@ a, #banner {color: #ff5c5c;}
  @-webkit-keyframes bounce {
      0% {-webkit-transform: translateY(0);} 
      50% {-webkit-transform: translateY(-10px);} 
- 100% {-webkit-transform: translateY(0);}}
+     100% {-webkit-transform: translateY(0);}}
  @-zom-keyframes bounce {
      0% {-zom-transform: translateY(0);} 
      50% {-zom-transform: translateY(-10px);} 
- 100% {-zom-transform: translateY(0);}}
+     100% {-zom-transform: translateY(0);}}
  @-ms-keyframes bounce {
      0% {-ms-transform: translateY(0);} 
      50% {-ms-transform: translateY(-10px);} 
- 100% {-ms-transform: translateY(0);}}
+     100% {-ms-transform: translateY(0);}}
  @-o-keyframes bounce {
      0% {-o-transform: translateY(0);} 
      50% {-o-transform: translateY(-10px);} 
- 100% {-o-transform: translateY(0);}}
+     100% {-o-transform: translateY(0);}}
  @keyframes bounce {
      0% {transform: translateY(0);} 
      50% {transform: translateY(-10px);} 
@@ -473,6 +482,20 @@ section.card .tx img{
     position: absolute;
 }
 
+/*css for card photos section*/
+.card .card-photo{
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+.card .photo-ani{height:100%;}
+
+.card .photo1, .photo2, .photo3, .photo4, .photo5 {
+    background-image: url("../images/CD141016137559869EkEk1410410441.jpg-album");
+}
+
 /*css for how to go to hotel*/
 .dh_area {
     padding: 0px 35px;
@@ -510,15 +533,15 @@ section.card .tx img{
     height:26px;
 }
 .ul_item li:first-child i{
-    background:url(http://file.xitie.net.cn/66_map_icons.png) no-repeat 3px 0px;
+    background:url(../images/66_map_icons.png) no-repeat 3px 0px;
     background-size:80% auto;
 }
 .ul_item li:nth-child(2) i {
-    background:url(http://file.xitie.net.cn/66_map_icons.png) no-repeat 0 -42px;
+    background:url(../images/66_map_icons.png) no-repeat 0 -42px;
     background-size:80% auto;
 }
 .ul_item li:last-child i {
-    background:url(http://file.xitie.net.cn/66_map_icons.png) no-repeat 4px -90px;
+    background:url(../images/66_map_icons.png) no-repeat 4px -90px;
     background-size:80% auto;
 }
 
@@ -531,12 +554,14 @@ section.card .tx img{
 	padding:5% 0 5% 0;
 	text-align:center;
 }
+.map-container { margin: 0 15px; }
 .map-box {
  position: relative;
- margin: 15px 15px 0;
  border-radius: 5px;
  background: #fff;
  padding: 15px;
+ max-width: 600px;
+ margin: 0 auto;
 }
 
 .map-msg {
@@ -575,7 +600,7 @@ section.card .tx img{
 }
 .map_btn{
     width:110px;
-    margin:30px auto 0px auto;
+    margin:0px auto 0px auto;
     line-height:36px;
     background:#ee4351;
     border-radius:4px;
@@ -616,3 +641,174 @@ section.card .tx img{
         -webkit-align-items: center;
         align-items: center;
     }
+
+
+/*css for gallery page*/
+.gallery-container {background-color: #feefe2;}
+
+/*css for blessing page*/
+.container .card form {text-align: left;}
+
+.bless_tit{
+  color:#555;
+  height:30px;
+  line-height:30px;
+  border-bottom:1px #ccc solid;
+  margin:30px 0px 30px 0px;
+  text-align:center;
+  position:relative;
+}
+.bless_tit span{
+    position:absolute;
+	bottom:-15px;
+	left:50%;
+	background:#feefe2;
+	padding:0px 20px;
+    text-align:center;
+	margin-left:-50px;
+}
+ul.bless-wall {
+margin-top: 30px;
+}
+ul.bless-wall li {
+    /*让贴纸在按行显示，可以使用float实现效果*/
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    margin: 1em 1em 3em;
+    font-size: 10px;
+}
+
+ul.bless-wall .msg_style {
+    height: auto;
+    /*margin-left: 4%;*/
+    vertical-align: middle;
+}
+
+ul.bless-wall section.bless-card {
+    /*使用box-shadow制作阴影效果*/
+    -moz-box-shadow: 5px 5px 7px rgba(33, 33, 33, 0.4);
+    -webkit-box-shadow: 5px 5px 7px rgba(33, 33, 33, 0.4);
+    box-shadow: 5px 5px 7px rgba(33, 33, 33, 0.4);
+    /*使用transform中的rotate制作旋转效果*/
+    -webkit-transform: rotate(-2deg);
+    -o-transform: rotate(-2deg);
+    -moz-transform: rotate(-2deg);
+    -ms-transform: rotate(-2deg);
+    transform: rotate(-2deg);
+    /*为后面的胶纸效果设定一个参照值*/
+    position: relative;
+    /*实现一个四方形的标签纸效果*/
+    display: inline-block;
+    height: 80%;
+    width: 80%;
+    font-size: 100%;
+    text-decoration: none;
+    color: #000;
+    background-color: #ffc;
+    padding: 1em;
+    cursor: defaul.bless-wallt;
+}
+
+/*使用CSS3伪类选择器中的":before"制作胶纸效果*/
+ul.bless-wall section.bless-card:before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 35%;
+    width: 50px;
+    height: 30px;
+    background-color: rgba(255, 255, 204, 0.5);
+    border-left: 1px dashed rgba(0, 0, 0, 0.1);
+    border-right: 1px dashed rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+}
+
+/*step2*/
+
+ul.bless-wall h2 {
+    font-family: 'Eater', cursive;
+    font-size: 140%;
+    font-weight: bold;
+    padding-bottom: 10px;
+    padding-top: 5px;
+}
+
+ul.bless-wall h3 {
+    font-family: 'Eater', cursive;
+    padding-bottom: 10px;
+    padding-top: 5px;
+    font-size: medium;
+    font-weight: normal;
+    color: rgba(33, 33, 33, 0.7);
+    width: 200px;
+}
+
+/*step3*/
+/*给第2，4，6，8...2n处的标签改变旋转值和背景色*/
+ul.bless-wall li:nth-child(even) section.bless-card {
+    -webkit-transform: rotate(4deg);
+    -o-transform: rotate(4deg);
+    -moz-transform: rotate(4deg);
+    -ms-transform: rotate(4deg);
+    transform: rotate(4deg);
+    position: relative;
+    top: 5px;
+    background-color: #cfc;
+}
+
+/*给第3，6，9...3n处的标签改变旋转值和背景色*/
+ul.bless-wall li:nth-child(3n) section.bless-card {
+    position: relative;
+    top: -5px;
+    background-color: #ccf;
+}
+
+/*给第5,10,15...5n处的标签改变旋转值和背景色*/
+ul.bless-wall li:nth-child(5n) section.bless-card {
+    position: relative;
+    top: -10px;
+    background-color: #FAC8C8;
+}
+
+/*改变对应的胶纸色*/
+ul.bless-wall li:nth-child(even) section.bless-card:before {
+    background-color: rgba(204, 255, 204, 0.5);
+}
+
+ul.bless-wall li:nth-child(3n) section.bless-card:before {
+    background-color: rgba(204, 204, 255, 0.5);
+}
+
+/*step4*/
+ul.bless-wall li section:hover,
+ul.bless-wall li section:focus {
+    /*改变阴影效果*/
+    -moz-box-shadow: 10px 10px 7px rgba(0, 0, 0, 0.7);
+    -webkit-box-shadow: 10px 10px 7px rgba(0, 0, 0, 0.7);
+    box-shadow: 10px 10px 7px rgba(0, 0, 0, 0.7);
+}
+
+ul.bless-wall div {
+    width: 100%;
+    height: 100%;
+    OVERFLOW-Y: auto;
+    OVERFLOW-X: hidden;
+}
+
+ul.bless-wall h4 {
+    float: right;
+    z-index: 9999;
+    font-size: medium;
+}
+
+ul.bless-wall h4:hover {
+    cursor: pointer;
+    color: red;
+}
+
+ul.bless-wall p {
+    font-size: large;
+}

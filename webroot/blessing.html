@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="renderer" content="webkit">
+        <title>婚礼</title>
+        <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" type="text/css">
+        <link rel="stylesheet" href="css/swiper-3.3.1.min.css" type="text/css">
+        <link rel="stylesheet" href="css/animate.min.css" type="text/css">
+        <!-- Custom styles for this template -->
+        <link href="css/wedding.css" rel="stylesheet">
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+            <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <!-- Baidu Map API -->
+        <!-- <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=BNiy3VISejq5RO3zaPwDMSefokaWc6iu"></script> -->
+    </head>
+    <body class="gallery-container">
+        <nav id='header'>
+            <ul class="ul_nav">
+                <li class="invitation"><a href="#invitation" class="nav-invitation"></a></li>
+                <li class="address"><a href="#address" class="nav-address"></a></li>
+                <li class="photos"><a href="gallery.html" class="nav-photos"></a></li>
+                <li class="message active"><a href="blessing.html" class="nav-message"></a></li>
+            </ul>
+        </nav>
+        <div class="nav_top">
+            <label id="playbox" class="on" onclick="mp3_play();">
+                <audio id="audio" autoplay="autoplay">
+                    <source src="http://mp3.123hl.cn/wodemingzijiaoyilian.m4a" type="audio/mpeg">
+                </audio>
+            </label>
+        </div>
+        <!--<div class="page-wrapper">-->
+        <div class="container">
+            <section class="card">
+                <div class="marry_title">祝福</div>
+                <form action="form.php" class="col-xs-10 col-xs-offset-1">
+                    <div class="form-group">
+                        <label class="control-label" for="userName" >您的姓名：</label>
+                        <div class="">
+                            <input type="text" class="form-control" id="userName" name="userName" placeholder="名字">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="status">是否赴宴：</label>
+                        <div class="">
+                            <select id="status" name="status" class="form-control">
+                                <option value="1">赴宴</option>
+                                <option value="2">待定</option>
+                                <option value="3">有事</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class=" control-label" for="count">赴宴人数：</label>
+                        <div class="">
+                            <select id="count" name="count" class="form-control">
+                                <option value="1">1人</option>
+                                <option value="2">2人</option>
+                                <option value="3">3人</option>
+                                <option value="4">4人</option>
+                                <option value="5">5人</option>
+                                <option value="6">6人</option>
+                                <option value="7">7人</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class=" control-label" for="blessMsg">对新人说些什么：</label>
+                        <textarea id="blessMsg" name="blessMsg" class="form-control" rows="3"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button type="button" class="btn btn-danger col-xs-12">提交</button>
+                    </div>
+                </form>
+            </section>
+            <div class="clearfix"></div>
+            <div class="bless_tit"><span>好友祝福</span></div>
+            <div class="clearfix"></div>
+            <ul class="bless-wall" id="msglist">
+                <li class="msg_style">
+                    <section class="bless-card">
+                        <div name="liContent">
+                            <h2>2016-05-13 20:36:37</h2>
+
+                            <p>你能看见吗？</p>
+                        </div>
+                        <h3>来自: 中国 安徽 </h3>
+                        <h4 id="msg1463142997300" onclick="showReply('1463142997300');">
+                            回复(0)</h4>
+                    </section>
+                </li>
+                <li class="msg_style">
+                    <section class="bless-card">
+                        <div name="liContent">
+                            <h2>2016-05-13 20:36:37</h2>
+
+                            <p>你能看见吗？我很疑惑也很着急</p>
+                        </div>
+                        <h3>来自: 中国 安徽 </h3>
+                        <h4 id="msg1463142997300" onclick="showReply('1463142997300');">
+                            回复(0)</h4>
+                    </section>
+                </li>
+                <li class="msg_style">
+                    <section class="bless-card">
+                        <div name="liContent">
+                            <h2>2016-05-13 20:36:37</h2>
+
+                            <p>你能看见吗？我很疑惑也很着急，死哪去了？到底怎么啦？</p>
+                        </div>
+                        <h3>来自: 中国 安徽 </h3>
+                        <h4 id="msg1463142997300" onclick="showReply('1463142997300');">
+                            回复(0)</h4>
+                    </section>
+                </li>
+            </ul>
+        </div>
+            
+        <!--</div>-->
+
+        <!-- Bootstrap core JavaScript
+            ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <!--<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>-->
+        <script src="js/zepto.min.js"></script>
+        <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script></script>
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+        <script src="js/ie10-viewport-bug-workaround.js"></script>
+        <script src="js/swiper/swiper-3.3.1.jquery.min.js"></script>
+        <script src="js/swiper/swiper.animate1.0.2.min.js"></script>
+        <script type="text/javascript" src="js/browser-utils.js"></script>
+    </body>
+</html>
