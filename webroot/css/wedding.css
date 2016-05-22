@@ -83,6 +83,11 @@ a, #banner {color: #ff5c5c;}
     border-radius: 50%;
 }
 .nav_top label.on {
+    animation-name: x-spin;
+    transform-style: preserve-3d;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
     -webkit-transform-style: preserve-3d;
     -webkit-animation-name: x-spin;
     -webkit-animation-duration: 1s;
@@ -105,25 +110,21 @@ a, #banner {color: #ff5c5c;}
     cursor: pointer;
     -webkit-tap-highlight-color: raba(0,0,0,0);
 }
- @-webkit-keyframes x-spin {
-     0% { -webkit-transform:rotate(0deg)}
-     100% { -webkit-transform:rotate(360deg)}
- }
-  @-moz-keyframes x-spin {
-     0% { -moz-transform:rotate(0deg)}
-     100% { -moz-transform:rotate(360deg)}
- }
-  @-o-keyframes x-spin {
-     0% { -o-transform:rotate(0deg)}
-     100% { -o-transform:rotate(360deg)}
- }
-  @-ms-keyframes x-spin {
-     0% { -ms-transform:rotate(0deg)}
-     100% { -mos-transform:rotate(360deg)}
- }
  @keyframes x-spin {
-     0% { transform:rotate(0deg)}
-     100% { transform:rotate(360deg)}
+     0% { 
+     transform:rotate(0deg);
+     -webkit-transform:rotate(0deg);
+     -moz-transform:rotate(0deg);
+     -o-transform:rotate(0deg);
+     -ms-transform:rotate(0deg);
+     }
+     100% { 
+     transform:rotate(360deg);
+     -webkit-transform:rotate(360deg);
+     -moz-transform:rotate(360deg);
+     -o-transform:rotate(360deg);
+     -ms-transform:rotate(360deg);
+     }
  }
  @-webkit-keyframes bounce {
      0% {-webkit-transform: translateY(0);} 
@@ -807,7 +808,7 @@ ul.bless-wall p {
     font-size: large;
 }
 
-.see-more-bless {
+.no-bless, .see-more-bless {
     clear: both;
     display: inline-block;
     width: 100%;
@@ -816,4 +817,38 @@ ul.bless-wall p {
     text-align: center;
     margin: 0px auto;
     padding: 20px 0px 20px 0px;
+}
+.call {
+    padding-left: 0;
+    margin-bottom: 30px;
+}
+.call li {
+list-style-type: none;
+}
+.call li a{
+	display:block;
+    width:120px;
+	line-height:24px;
+	color:#fff;
+	font-size:16px;
+	margin:10px 0px 10px 0px;
+	padding:10px 0px 10px 10px;
+	border-radius:44px;
+}
+.call li a i{
+	display:inline-block;
+	float:left;
+    width:23px;
+	height:23px;
+	margin-right:10px;
+    background:url(../images/31_tel_icon.png) center no-repeat;
+    background-size:auto 23px;
+}
+.call li.tel_01 a{
+    float:right;
+	background:#ff9999;
+}
+.call li.tel_02 a{
+    float:left;
+	background:#89b0d8;
 }

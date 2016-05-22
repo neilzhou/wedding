@@ -8,6 +8,7 @@ create table if not exists `wedding_participants`(
     name varchar(50) NOT NULL,
     join_status SMALLINT(2) UNSIGNED NOT NULL DEFAULT 1 COMMENT '1: comming, 2: pending, 3: busy',
     count SMALLINT(2) UNSIGNED NOT NULL DEFAULT 1,
+    phone_number varchar(20) NOT NULL DEFAULT '',
     created_at DATETIME NULL,
     modified_at DATETIME NULL,
     PRIMARY KEY(id),

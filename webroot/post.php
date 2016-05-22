@@ -37,6 +37,7 @@ if (!$conn->connected()) {
 $data['name'] = getData('userName');
 $data['join_status'] = getData('status');
 $data['count'] = getData('count');
+$data['phone_number'] = getData('phone_number');
 
 $errors = validate($data);
 //echo json_encode($errors);exit;
@@ -65,6 +66,7 @@ if (empty($data['participant_id'])) {
 
 unset($data['join_status']);
 unset($data['count']);
+unset($data['phone_number']);
 $data['message'] = getData('blessMsg');
 
 if (empty($data['message'])) {

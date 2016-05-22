@@ -37,6 +37,7 @@ $(function(){
                 resetForm();
                 $('.alertModal .modal-body').html(resp.message);
                 $('.alertModal').modal('show');
+                $('ul#msglist li').length > 0 && $('.no-bless').addClass('hidden');
             },
             'complete': function(xhr, textStatus){
                 $this.data('posting', false);
@@ -94,7 +95,8 @@ function loadBless(){
         if (!resp.success || !resp.has_more) {
             $('.see-more-bless').text('没有啦！');
             $('.see-more-bless').data('noMore', true);
-            $('.see-more-bless').removeClass('hidden')
+            $('ul#msglist li').length > 0 && $('.see-more-bless').removeClass('hidden');
+            $('ul#msglist li').length > 0 && $('.no-bless').addClass('hidden');
         }
         if (!resp.success) {
             return;
