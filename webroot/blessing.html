@@ -26,8 +26,8 @@
     <body class="gallery-container">
         <nav id='header'>
             <ul class="ul_nav">
-                <li class="invitation"><a href="#invitation" class="nav-invitation"></a></li>
-                <li class="address"><a href="#address" class="nav-address"></a></li>
+                <li class="invitation"><a href="index.html#invitation" class="nav-invitation"></a></li>
+                <li class="address"><a href="index.html#address" class="nav-address"></a></li>
                 <li class="photos"><a href="gallery.html" class="nav-photos"></a></li>
                 <li class="message active"><a href="blessing.html" class="nav-message"></a></li>
             </ul>
@@ -35,7 +35,7 @@
         <div class="nav_top">
             <label id="playbox" class="on" onclick="mp3_play();">
                 <audio id="audio" autoplay="autoplay">
-                    <source src="http://mp3.123hl.cn/wodemingzijiaoyilian.m4a" type="audio/mpeg">
+                    <source src="mp3/wodemingzijiaoyilian.m4a" type="audio/mpeg">
                 </audio>
             </label>
         </div>
@@ -43,11 +43,11 @@
         <div class="container">
             <section class="card">
                 <div class="marry_title">祝福</div>
-                <form action="form.php" class="col-xs-10 col-xs-offset-1">
+                <form action="post.php" method="POST" class="col-xs-10 col-xs-offset-1">
                     <div class="form-group">
                         <label class="control-label" for="userName" >您的姓名：</label>
                         <div class="">
-                            <input type="text" class="form-control" id="userName" name="userName" placeholder="名字">
+                            <input type="text" class="form-control" id="userName" name="userName" placeholder="名字" >
                         </div>
                     </div>
                     <div class="form-group">
@@ -76,18 +76,19 @@
                     </div>
                     <div class="form-group">
                         <label class=" control-label" for="blessMsg">对新人说些什么：</label>
-                        <textarea id="blessMsg" name="blessMsg" class="form-control" rows="3"></textarea>
+                        <textarea id="blessMsg" name="blessMsg" class="form-control" rows="3" placeholder="在这里留下您想说的话"></textarea>
                     </div>
                     <div class="form-group">
-                        <button type="button" class="btn btn-danger col-xs-12">提交</button>
+                        <button type="submit" class="btn btn-danger col-xs-12">提交</button>
                     </div>
                 </form>
             </section>
             <div class="clearfix"></div>
             <div class="bless_tit"><span>好友祝福</span></div>
             <div class="clearfix"></div>
+            <p class="no-bless hidden">快来祝福我们吧！</p>
             <ul class="bless-wall" id="msglist">
-                <li class="msg_style">
+                <!-- <li class="msg_style">
                     <section class="bless-card">
                         <div name="liContent">
                             <h2>2016-05-13 20:36:37</h2>
@@ -98,46 +99,47 @@
                         <h4 id="msg1463142997300" onclick="showReply('1463142997300');">
                             回复(0)</h4>
                     </section>
-                </li>
-                <li class="msg_style">
-                    <section class="bless-card">
-                        <div name="liContent">
-                            <h2>2016-05-13 20:36:37</h2>
-
-                            <p>你能看见吗？我很疑惑也很着急</p>
-                        </div>
-                        <h3>来自: 中国 安徽 </h3>
-                        <h4 id="msg1463142997300" onclick="showReply('1463142997300');">
-                            回复(0)</h4>
-                    </section>
-                </li>
-                <li class="msg_style">
-                    <section class="bless-card">
-                        <div name="liContent">
-                            <h2>2016-05-13 20:36:37</h2>
-
-                            <p>你能看见吗？我很疑惑也很着急，死哪去了？到底怎么啦？</p>
-                        </div>
-                        <h3>来自: 中国 安徽 </h3>
-                        <h4 id="msg1463142997300" onclick="showReply('1463142997300');">
-                            回复(0)</h4>
-                    </section>
-                </li>
+                </li> -->
             </ul>
+            <p class="see-more-bless hidden" style="cursor:pointer;">查看更多的祝福</p>
         </div>
             
         <!--</div>-->
+        <div id="template" class="hidden">
+            <li class="msg_style">
+            <section class="bless-card" data-id="{{bless_id}}">
+                <div>
+                    <h2>{{created_at}}</h2>
+                    <p>{{bless_msg}}</p>
+                </div>
+                <h3>来自：{{username}}</h3>
+            </section>
+            </li>
+        </div>
 
+<div class="modal fade alertModal" tabindex="-1" role="dialog" aria-labelledby="alertModalLabel">
+  <div class="modal-dialog modal-sm" style="margin-top: 30%;">
+    <div class="modal-content">
+       <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel" style="color:#ee4351;">操作成功！</h4>
+      </div>
+      <div class="modal-body">
+      </div>
+    </div>
+  </div>
         <!-- Bootstrap core JavaScript
             ================================================== -->
         <!-- Placed at the end of the document so the pages load faster -->
-        <!--<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>-->
-        <script src="js/zepto.min.js"></script>
+        <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+        <!--<script src="js/zepto.min.js"></script>-->
         <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script></script>
         <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
         <script src="js/ie10-viewport-bug-workaround.js"></script>
         <script src="js/swiper/swiper-3.3.1.jquery.min.js"></script>
         <script src="js/swiper/swiper.animate1.0.2.min.js"></script>
         <script type="text/javascript" src="js/browser-utils.js"></script>
+        <script type="text/javascript" src="js/bootstrap-utils.js"></script>
+        <script type="text/javascript" src="js/blessing.js"></script>
     </body>
 </html>

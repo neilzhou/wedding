@@ -38,47 +38,40 @@ a, #banner {color: #ff5c5c;}
 .ul_nav li a {
     display: block;
     width: 59px;
-    height: 55px;
+    height: 56px;
+    background-image: url(../images/31_ul_nav_menu.png);
     background-repeat: no-repeat;
-    background-size: 176px auto;
-    transition: all 0.4s ease-in-out;
+    /*background-size: 176px auto;*/
+    /*transition: all 0.1s ease-in-out;*/
 }
 .ul_nav li a.nav-invitation {
-    background-image: url(../images/31_ul_nav.png);
-    background-position: -127px 0px;
+    background-position: -70px 0px;
 }
 .ul_nav li a.nav-address{
-    background-image: url(../images/31_ul_nav.png);
-    background-position: -127px -54px;
+    background-position: -70px -60px;
 }
 .ul_nav li a.nav-photos{
-    background-image: url(../images/31_ul_nav.png);
-    background-position: -127px -165px;
+    background-position: -70px -120px;
 }
 
 .ul_nav li a:hover.nav-invitation, .ul_nav li.active a.nav-invitation {
-    background-image: url(../images/31_ul_nav.png);
     background-position: 0px 0px;
 }
 
 .ul_nav li a:hover.nav-address, .ul_nav li.active a.nav-address {
-    background-image: url(../images/31_ul_nav.png);
-    background-position: 0px -54px;
+    background-position: 0px -60px;
 }
 
 .ul_nav li a:hover.nav-photos, .ul_nav li.active a.nav-photos {
-    background-image: url(../images/31_ul_nav.png);
-    background-position: 0px -165px;
+    background-position: 0px -120px;
 }
 
 .ul_nav li a.nav-message {
-    background-image: url(../images/31_ul_nav.png);
-    background-position: -127px -277px;
+    background-position: -70px -180px;
 }
 
 .ul_nav li a:hover.nav-message, .ul_nav li.active a.nav-message {
-    background-image: url(../images/31_ul_nav.png);
-    background-position: 0px -277px;
+    background-position: 0px -180px;
 }
 
 /*css for music play*/
@@ -427,6 +420,7 @@ section.card .tx img{
 }
 
 .time,
+.message,
 .address{
     clear:both;
     color:#fff;
@@ -811,4 +805,15 @@ ul.bless-wall h4:hover {
 
 ul.bless-wall p {
     font-size: large;
+}
+
+.see-more-bless {
+    clear: both;
+    display: inline-block;
+    width: 100%;
+    color: #fd9821;
+    font-size: 12px;
+    text-align: center;
+    margin: 0px auto;
+    padding: 20px 0px 20px 0px;
 }

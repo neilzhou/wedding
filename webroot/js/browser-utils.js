@@ -14,7 +14,7 @@ var browser = {
 };
 
 function mp3_play(mp3_url){
-    var qt_mp3_url = "http://mp3.123hl.cn/wodemingzijiaoyilian.m4a";
+    var qt_mp3_url = "mp3/wodemingzijiaoyilian.m4a";
     if (mp3_url) {
         $('#playbox audio').get(0).pause();
         $('#playbox audio').get(0).setAttribute('src', mp3_url);
