@@ -34,8 +34,9 @@
         </nav>
         <div class="nav_top">
             <label id="playbox" class="on" onclick="mp3_play();">
-                <audio id="audio" autoplay="autoplay">
-                    <source src="mp3/wodemingzijiaoyilian.m4a" type="audio/mpeg">
+                <audio id="audio" autoplay="autoplay" loop="loop">
+                    <source id="mp3Source" src="mp3/xiaofuqi.mp3" type="audio/mpeg">
+                    <source id="oggSource" src="mp3/xiaofuqi.ogg" type="audio/ogg">
                 </audio>
             </label>
         </div>
@@ -201,7 +202,7 @@
         <script src="js/ie10-viewport-bug-workaround.js"></script>
         <script src="js/swiper/swiper-3.3.1.jquery.min.js"></script>
         <script src="js/swiper/swiper.animate1.0.2.min.js"></script>
-        <script type="text/javascript" src="js/browser-utils.js"></script>
+        <script src="js/browser-utils.js"></script>
         <script src="js/wedding.js"></script>
     </body>
 </html>

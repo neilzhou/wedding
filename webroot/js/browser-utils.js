@@ -49,8 +49,18 @@ $(function(){
         }
     }
 
-    var mp3_urls = [];
-    var index = 0;
-    $('#audio').on('ended', function(){
-    });
+    var mp3_urls = [
+        'xiaofuqi',
+        'yilian'
+    ];
+
+    var first = 0;
+    if(browser.versions.mobile) {
+        $('body').on('click tap touchstart swipeUp', function(){
+            if (first == 0) {
+                $('#playbox audio').get(0).play();
+                first ++;    
+            }
+        });
+    };
 });

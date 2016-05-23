@@ -12,7 +12,7 @@ $(document).ready(function(){
         mousewheelControl: true,
         onInit: function(swiper){ //Swiper2.x的初始化是onFirstInit
             swiperAnimateCache(swiper); //隐藏动画元素 
-            if(!pageHash || pageHash != 'address') {
+            if((typeof pageHash == 'undefined') || pageHash != 'address') {
                 swiperAnimate(swiper); //初始化完成开始动画
             }
         }, 
@@ -28,7 +28,7 @@ $(document).ready(function(){
         mySwiper.slideTo(2, 1000, true);//切换到第3个slide，速度为1秒
     });
 
-    if(pageHash && pageHash == 'address') {
+    if((typeof pageHash != 'undefined') && pageHash == 'address') {
         $('li.address').trigger('click');
     }
 });

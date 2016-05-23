@@ -34,8 +34,9 @@
         </nav>
         <div class="nav_top">
             <label id="playbox" class="on" onclick="mp3_play();">
-                <audio id="audio" autoplay="autoplay">
-                    <source src="mp3/wodemingzijiaoyilian.m4a" type="audio/mpeg">
+                <audio id="audio" autoplay="autoplay" loop="loop">
+                    <source id="mp3Source" src="mp3/xiaofuqi.mp3" type="audio/mpeg">
+                    <source id="oggSource" src="mp3/xiaofuqi.ogg" type="audio/ogg">
                 </audio>
             </label>
         </div>
