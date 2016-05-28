@@ -8,10 +8,9 @@
         <meta name="renderer" content="webkit">
         <title>婚礼</title>
         <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" type="text/css">
-        <!--<link href="css/nanogallery.min.css" rel="stylesheet" type="text/css">-->
         <link href="//cdn.bootcss.com/nanogallery/5.10.1/css/nanogallery.min.css" rel="stylesheet">
         <!-- Custom styles for this template -->
-        <link href="css/wedding.css" rel="stylesheet">
+        <link href="css/wedding.min.css" rel="stylesheet">
 
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -19,9 +18,6 @@
             <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
             <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
-
-        <!-- Baidu Map API -->
-        <!-- <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=BNiy3VISejq5RO3zaPwDMSefokaWc6iu"></script> -->
     </head>
     <body class="gallery-container">
         <nav id='header' class="">
@@ -54,32 +50,7 @@
             ================================================== -->
         <!-- Placed at the end of the document so the pages load faster -->
         <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
-        <!--<script src="js/zepto.min.js"></script>-->
-        <!--<script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script></script>-->
-        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-        <script src="js/ie10-viewport-bug-workaround.js"></script>
-        <!--<script type="text/javascript" src="js/jquery.nanogallery.min.js"></script>-->
         <script src="//cdn.bootcss.com/nanogallery/5.10.1/jquery.nanogallery.min.js"></script>
-        <script type="text/javascript" src="js/browser-utils.js"></script>
-        <script type="text/javascript" charset="utf-8">
-        $(function(){
-
-                var contentGallery1a=[];
-                for(var i=1; i<31; i++){
-                contentGallery1a.push({src: 'images/g_'+i+'.jpg', srct: 'images/s_'+i+'.jpg'});
-                }
-
-                $("#nanoGallery").nanoGallery({
-                    items: contentGallery1a,
-                    // colorScheme:'clean',
-                    colorScheme:'light',
-                    locationHash: false,
-                    thumbnailWidth: '300 XS130 SM150 LA250 XL400', 
-                    thumbnailHeight: "auto",
-                    thumbnailLabel: {display:false},
-                    //slideshowAutoStart: true
-                });
-        });   
-        </script>
+        <script type="text/javascript" src="js/gallery.min.js"></script>
     </body>
 </html>
