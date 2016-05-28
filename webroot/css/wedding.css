@@ -77,12 +77,15 @@ a, #banner {color: #ff5c5c;}
 /*css for music play*/
 .nav_top {
     position: fixed;
-    top: 50px;
+    top: 20px;
     right: 20px;
     z-index: 9999;
     border-radius: 50%;
 }
 .nav_top label.on {
+    background: url(../images/66_units_icons.png) no-repeat;
+    background-position: 0 0;
+    background-size: auto 32px;
     animation-name: x-spin;
     transform-style: preserve-3d;
     animation-duration: 1s;
@@ -93,11 +96,11 @@ a, #banner {color: #ff5c5c;}
     -webkit-animation-duration: 1s;
     -webkit-animation-iteration-count: infinite;
     -webkit-animation-timing-function: linear;
-    -moz-animation-name: x-spin;
-    -moz-transform-style: preserve-3d;
-    -moz-animation-duration: 1s;
-    -moz-animation-iteration-count: infinite;
-    -moz-animation-timing-function: linear;
+    /*-moz-animation-name: x-spin;*/
+    /*-moz-transform-style: preserve-3d;*/
+    /*-moz-animation-duration: 1s;*/
+    /*-moz-animation-iteration-count: infinite;*/
+    /*-moz-animation-timing-function: linear;*/
 }
 .nav_top label {
     display: block;
@@ -106,6 +109,7 @@ a, #banner {color: #ff5c5c;}
     width: 32px;
     height: 32px;
     background: url(../images/66_units_icons.png) no-repeat;
+    background-position: -86px 0;
     background-size: auto 32px;
     cursor: pointer;
     -webkit-tap-highlight-color: raba(0,0,0,0);

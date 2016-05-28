@@ -51,7 +51,7 @@ $(function(){
     }
 
     var first = 0;
-    if(browser.versions.mobile && !browser.versions.isWeixin) {
+    if(browser.versions.mobile ) {
         $('body').on('click tap touchstart swipeUp', function(){
             if (first == 0) {
                 $('#playbox audio').get(0).play();
