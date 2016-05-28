@@ -3,11 +3,12 @@ var browser = {
         var u = navigator.userAgent,
         app = navigator.appVersion;
         return {
+            isWeixin: !!u.match(/MicroMessenger/i),
             mobile: !!u.match(/AppleWebKit.*Mobile.*/),
-                ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/),
-                android: u.indexOf("Android") > -1 || u.indexOf("Linux") > -1,
-                iPhone: u.indexOf("iPhone") > -1,
-                iPad: u.indexOf("iPad") > -1
+            ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/),
+            android: u.indexOf("Android") > -1 || u.indexOf("Linux") > -1,
+            iPhone: u.indexOf("iPhone") > -1,
+            iPad: u.indexOf("iPad") > -1
         };
     } (),
     language: (navigator.browserLanguage || navigator.language).toLowerCase()
@@ -49,13 +50,8 @@ $(function(){
         }
     }
 
-    var mp3_urls = [
-        'xiaofuqi',
-        'yilian'
-    ];
-
     var first = 0;
-    if(browser.versions.mobile) {
+    if(browser.versions.mobile && !browser.versions.isWeixin) {
         $('body').on('click tap touchstart swipeUp', function(){
             if (first == 0) {
                 $('#playbox audio').get(0).play();

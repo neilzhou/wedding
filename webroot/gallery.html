@@ -8,7 +8,8 @@
         <meta name="renderer" content="webkit">
         <title>婚礼</title>
         <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" type="text/css">
-        <link href="css/nanogallery.min.css" rel="stylesheet" type="text/css">
+        <!--<link href="css/nanogallery.min.css" rel="stylesheet" type="text/css">-->
+        <link href="//cdn.bootcss.com/nanogallery/5.10.1/css/nanogallery.min.css" rel="stylesheet">
         <!-- Custom styles for this template -->
         <link href="css/wedding.css" rel="stylesheet">
 
@@ -54,64 +55,19 @@
         <!-- Placed at the end of the document so the pages load faster -->
         <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
         <!--<script src="js/zepto.min.js"></script>-->
-        <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script></script>
+        <!--<script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script></script>-->
         <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
         <script src="js/ie10-viewport-bug-workaround.js"></script>
-        <script type="text/javascript" src="js/jquery.nanogallery.min.js"></script>
+        <!--<script type="text/javascript" src="js/jquery.nanogallery.min.js"></script>-->
+        <script src="//cdn.bootcss.com/nanogallery/5.10.1/jquery.nanogallery.min.js"></script>
         <script type="text/javascript" src="js/browser-utils.js"></script>
         <script type="text/javascript" charset="utf-8">
         $(function(){
-                var contentGallery1a=[
-				{
-                    // src: 'demonstration/image_01.jpg',		// image url
-					// srct: 'demonstration/image_01ts.jpg',	// thumbnail url
-                    src: 'images/CD141016137559869EkEk1410410462.jpg-album',
-                    srct: 'images/CD141016137559869EkEk1410410462.jpg-album',
-				},
-				{
-                    src: 'images/CD141016137559869EkEk1410410462.jpg-album',
-                    srct: 'images/CD141016137559869EkEk1410410462.jpg-album',
-				},
-				{
-                    src: 'images/CD141016137559869EkEk1410410462.jpg-album',
-                    srct: 'images/CD141016137559869EkEk1410410462.jpg-album',
-				},
-				{
-                    src: 'images/CD141016137559869EkEk1410410462.jpg-album',
-                    srct: 'images/CD141016137559869EkEk1410410462.jpg-album',
-				},
-				{
-                    src: 'images/CD141016137559869EkEk1410410462.jpg-album',
-                    srct: 'images/CD141016137559869EkEk1410410462.jpg-album',
-				},
-				{
-                    src: 'images/CD141016137559869EkEk1410410462.jpg-album',
-                    srct: 'images/CD141016137559869EkEk1410410462.jpg-album',
-				},
-				{
-                    src: 'images/CD141016137559869EkEk1410410462.jpg-album',
-                    srct: 'images/CD141016137559869EkEk1410410462.jpg-album',
-				},
-				{
-                    src: 'images/CD141016137559869EkEk1410410462.jpg-album',
-                    srct: 'images/CD141016137559869EkEk1410410462.jpg-album',
-				},
-				{
-                    src: 'images/CD141016137559869EkEk1410410462.jpg-album',
-                    srct: 'images/CD141016137559869EkEk1410410462.jpg-album',
-				},
-				{
-                    src: 'images/CD141016137559869EkEk1410410462.jpg-album',
-                    srct: 'images/CD141016137559869EkEk1410410462.jpg-album',
-				},
-				{
-                    src: 'images/CD141016137559869EkEk1410410462.jpg-album',
-                    srct: 'images/CD141016137559869EkEk1410410462.jpg-album',
-				},
-				{
-                    src: 'images/CD141016137559869EkEk1410410462.jpg-album',
-                    srct: 'images/CD141016137559869EkEk1410410462.jpg-album',
-				}];
+
+                var contentGallery1a=[];
+                for(var i=1; i<31; i++){
+                contentGallery1a.push({src: 'images/g_'+i+'.jpg', srct: 'images/s_'+i+'.jpg'});
+                }
 
                 $("#nanoGallery").nanoGallery({
                     items: contentGallery1a,
@@ -121,8 +77,8 @@
                     thumbnailWidth: '300 XS130 SM150 LA250 XL400', 
                     thumbnailHeight: "auto",
                     thumbnailLabel: {display:false},
-                    slideshowAutoStart: true
-        });
+                    //slideshowAutoStart: true
+                });
         });   
         </script>
     </body>

@@ -290,7 +290,8 @@ section.introduction {
     position:relative;
     margin:0 auto;
     /*padding:110px 0;*/
-    background:#fffeee url(../images/album.png) center no-repeat;
+    /*background:#fffeee url(../images/album.png) center no-repeat;*/
+    background:#fffeee url(../images/album2.jpg) center no-repeat;
     background-size:auto 100%;
 }
 .welcome{
@@ -487,8 +488,22 @@ section.card .tx img{
 
 .card .photo-ani{height:100%;}
 
-.card .photo1, .photo2, .photo3, .photo4, .photo5 {
-    background-image: url("../images/CD141016137559869EkEk1410410441.jpg-album");
+.card .photo1{
+    /*background-image: url("../images/CD141016137559869EkEk1410410441.jpg-album");*/
+    background-image: url("../images/home_1.jpg")
+}
+
+.card .photo2{
+    background-image: url("../images/home_2.jpg")
+}
+.card .photo3{
+    background-image: url("../images/home_3.jpg")
+}
+.card .photo4{
+    background-image: url("../images/home_4.jpg")
+}
+.card .photo5{
+    background-image: url("../images/home_5.jpg")
 }
 
 /*css for how to go to hotel*/
