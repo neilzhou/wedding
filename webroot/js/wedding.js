@@ -29,6 +29,7 @@ $(document).ready(function(){
     });
 
     if((typeof pageHash != 'undefined') && pageHash == 'address') {
-        $('li.address').trigger('click');
+        //$('li.address').trigger('click');
+        mySwiper.slideTo(2, 1000, true);//切换到第3个slide，速度为1秒
     }
 });

@@ -24,11 +24,20 @@ class Connection
     }
 
     public function __construct(){
-        $config = array(
-            'driver' => 'mysql:host=127.0.0.1;dbname=wedding;charset=UTF8',
-            'username' => 'wedding',
-            'password' => 'Wedding@#$'
-        );
+        $prod = true;
+        if ($prod) {
+            $config = array(
+                'driver' => 'mysql:host=127.0.0.1;dbname=s642796db0;charset=UTF8',
+                'username' => 's642796db0',
+                'password' => '0d609d1b'
+            );
+        } else {
+            $config = array(
+                'driver' => 'mysql:host=127.0.0.1;dbname=wedding;charset=UTF8',
+                'username' => 'wedding',
+                'password' => 'Wedding@#$'
+            );
+        }
 
         try{
         
